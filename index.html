@@ -9,6 +9,25 @@
 </head>
 <body>
   <img src="КиноПоиск.jpg" alt="КиноПоиск" class="logo">
+  <div class="filters">
+    <select id="mood">
+      <option value="">Все настроения</option>
+      <option value="драма">Драма</option>
+      <option value="фантастика">Фантастика</option>
+      <option value="фэнтези">Фэнтези</option>
+    </select>
+    <select id="genre">
+      <option value="">Все жанры</option>
+      <option value="драма">Драма</option>
+      <option value="фантастика">Фантастика</option>
+      <option value="фэнтези">Фэнтези</option>
+    </select>
+    <select id="duration">
+      <option value="">Любая длительность</option>
+      <option value="short">Короткий (< 120 мин)</option>
+      <option value="long">Длинный (> 120 мин)</option>
+    </select>
+  </div>
   <div class="tinder">
     <div class="tinder--status">
       <i class="fa fa-remove"></i>
@@ -16,30 +35,30 @@
     </div>
 
     <div class="tinder--cards">
-      <div class="tinder--card">
-        <img src="https://loremflickr.com/600/300/nature">
-        <h3>Scenic View 1</h3>
-        <p>A beautiful landscape showcasing nature's splendor.</p>
+      <div class="tinder--card" data-mood="фантастика" data-genre="фантастика" data-duration="long">
+        <img src="https://upload.wikimedia.org/wikipedia/ru/c/c3/Interstellar_2014.jpg" alt="Интерстеллар">
+        <h3>Интерстеллар</h3>
+        <p>Фантастический фильм о путешествии через космос для спасения человечества. Режиссёр: Кристофер Нолан.</p>
       </div>
-      <div class="tinder--card">
-        <img src="https://loremflickr.com/600/300/mountains">
-        <h3>Scenic View 2</h3>
-        <p>Majestic mountains under a clear sky.</p>
+      <div class="tinder--card" data-mood="драма" data-genre="драма" data-duration="long">
+        <img src="https://kinopoisk-ru.clstorage.net/Sz3013n35/e894b4BoJl7-/7CdRhzNIhMEohZro8O5-NB6pgHA522aBpT4zrjzSpLkiwCkjeFL7bS26Q9wSDAL0ejRFnGVb-DntwZ-0qaKa3phiBHYSjdHEyeEKmHXeD5WLTEEhjV5SwHQLNkvOIaY6AFcLQIrQ-as53mc9Z7m3kH40kHg1yjkNmuIupH11f_yPV3BnVvj3sq82i9gifr4gvJjTJgkZ9VcmDOOMLeCm6GCGKZKYI8vI271ECBZJFRBsdxG6hG6IHBpwSwUNxp7_nfUC9lcZZNNOpNgLcf9NgnyZo2Tqu7eERaxgD57RN4tQ1IvSOBApWFk_hNknaTfRDJYx-cc927yYsLmHjlS8v6_lwFZX-RfCvvTLezLeb0Gu6FO2aqqWV6XeYa_Pc8UYwxWJIisAq6irjdYq54vV4g4FMfu2P1qt6gK6VF50jqwNJGI3JDjU443kq5tinA8DnwvzFEnbZYdHveMd32BGy5CGepM6cZqqqpxGWPQ7xeBfRWKIhB-abUthCdSvpy2svPfjpUdY1_J_xBgq88wNYs5o0EWq-6Sl1NwxLK0zd7jBRKozidObW1oeR0j1KYTQbbVx2BQcerzZAEgH73UM74_WIQaGmjcgDhZqS4OeTcF_OcI0uWonJNbN0hxf8VRagiQYMUgi2_s6joRqplg3UO8GQBqGPXo9yfBLJIw3bzzddBLmtTnFgP8lmalQbNyCbiszp1kb1ZX1TDBdryAEOXIkuaM6k-hrOp8EutZ6NvC9VyIbt--LTYkC2_eMRd7e3uZTBtc7JeIt9avYYt-9Unzq48frKWbV9J0zfP8ytoiCRfnTGlJryHn_Z2mWqHeC3CagqAccWu24YWjV7HYfz48Hg7eWKjTS7zcbiOHeP0P_GMME-7uHROUPsG2vAORbACfYkcrSaetI7LSIFpnEEkwWQog2HHrvSVJalQz0r1-PJ6CG9uh00l8Xq1sR7xywbllwpDlrtdRnTAHcjnEk-CLFaVD6ICl4uYwneoapFRMdVRDLlQw7rptCShTdVV1tvgUiVVdKRNLM9sn7kv1vY91a8BQpe7XU9yyyL46wBuqSFImg-pIpK_iMZ1gHOnUyvrVy-fQcCn_4Ythk_aYenJ_n0DY2uSWjPvSIiZBfjTAuaQNEeelGpae9wTw_cod4c-SbAxlQGnk4jrcKFAhXI531YMik3HqNWoD5hn5Wb96MRbCVRftV0b4UmBkRnu3xXljyVrjLhSYELsH-bNK2qXFmiIHq8jp4SHxVe7YZRkPsZlGp5yy6fVixirRdVo_MzzZSxvc4d7Cf56jq0h98gOyp4VX5C4aFhV4hnC1xVngz5Eugm0OaGIvd9GlFiIegnaVwG8TuSA-LM4h0HKRvX59EIrS3umYSjwcZq7L8XBI8aUBk2pvkpzeu0gztMwd7sFaIk5nj-dtafAd7ZJi08kxFwolmLqrfaWG6Bs53zI2tpkLWJek0ou4GOBlCLI9hniiSdgvZBwdVvoE_3pJ2yZD3--Do08mrSe02KoVbZbK9FIH7xu94Hgtg-LbMB8wcDlfilReYprNMVFjZY-2_4rxrgeY5G7bU1I7Q3g-QxgsAVqnzmHGpqQrthcgFybdTvjVwmEW9-W258loGbsQNvD_3gHeHG8ZivFSIegOfb2Gs-JGlaYukhmefMG1twQYLEmZK8_ky-8mYbiR6JRuGYg8F4Yul_Yq8C6Kr1c-HDR49F_EEN5jUwR0VSDhCH18gf1mR9On6VzX2zdMMDQNHe0EnuiIpw8mISJ-mytRohlGcFUGZtl3rvjoB-NRcZMyfnPTgVVT59NANdqgqgT59km17EXZJO5XVx-8Az72TNljAhNnhmmOIe0pd1iiHezVSfadiSlTu6F6oMZsFD3UPz4wF4MWVOneQv0RIKVP8zwLdGbJGePsEtGXO0m7sswSKkzY642li6npI7yQLFDuGMt50MgmmDppN-jOZ1i10jRy_BaLmR0q2UUzEG6tw_47SHmkzlljbRzUH_gFeXXLGmrDGqoHIM5kbKz8G6sdJZwO9xeHYJ96IfInAivX-hA2svMdQJPSpVLNsJsnpAO08of6q4CWaibb3JK-QPJ_C5VtDZ8iROHAIeeufZltX2DcwHlUQiZR-at6JU4k2zCTM_rzlY7YnGrajfCZZWzLPHRJ_WeNGKzhndeQMQ-7tUvZZU2bbAxoQaFk57-Upp4tE4Y5EInhmLhrOadG6RGyGroycVTGkppr1oM4mKYuz7F1jrohB5EkLprUW3FFdbeDGyzKXqvHo0cnrGb9kO8UZ5kOelvPJp4x4PHogmFS8V818zvbSRHVohbJNF0gocG9Ng385oDdryHckRZywz18QxEuyN6oheGB6CQu8dhvFy2YDvZSwS5VMGA-ZUngkPCdtvG91YFYXmDawriaZuYG-vCB-CoMGO5kHd4U_omxOwxVocxXKkznh-UmKH_Vp12mGM713Uiu37BqOGJOq9c-2vTztpyC2lxjW4w93OWlynPyhreqR9ko51aY1XFJdj0FlSIPUyIGIIKo5KC8myVcrBlCeNXNIB_6pfEmimmbuxO9vvwdiRQdYd6EdRUnbAD6dcq5qcFVrKmV0N14jXo5wdXiTF6siyIA6epifxIgVuYfz_pfi-7Ru-Axak2gX3rQvbbxWYaVlCdcQn2dICMDejyGei5O1metml4adIHy84LTa8OZ7YNvAOxk7v_Vr1TpHwSxnYhlUbDuuKFNJlBxUD1zt9GMk9ftlIp5GalgjLr8Svetzpmqr19WmHMHtT7A0iNNXatL7cyhJOe2GyrXIhCGeV3D6Fcz5DbtS-zQOBr8NfTUj1wYq9OBs9ZhY0L-uEL16cVfpO5RnhcxwzqyBVFmSFpqjKHCYCnpf1qrFGrQRv_Sguzbe6v35kypGL7aMn252AfQ12dUCnQZ7yGO_fOAsOPCkStt316UdMiwccscqkEfbQxsDmBlYfpdq9kpXM-xlMDokHLuug" alt="Побег из Шоушенка">
+        <h3>Побег из Шоушенка</h3>
+        <p>Драма о надежде и дружбе в тюрьме. Классика мирового кино.</p>
       </div>
-      <div class="tinder--card">
-        <img src="https://loremflickr.com/600/300/ocean">
-        <h3>Scenic View 3</h3>
-        <p>Serene ocean waves crashing on the shore.</p>
+      <div class="tinder--card" data-mood="драма" data-genre="драма" data-duration="long">
+        <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/4057c4b8-8208-4a04-b169-26b0661453e3/600x900" alt="Зелёная миля">
+        <h3>Зелёная миля</h3>
+        <p>История о чудесах и справедливости в тюрьме. Режиссёр: Фрэнк Дарабонт.</p>
       </div>
-      <div class="tinder--card">
-        <img src="https://loremflickr.com/600/300/forest">
-        <h3>Scenic View 4</h3>
-        <p>Lush green forests in autumn colors.</p>
+      <div class="tinder--card" data-mood="драма" data-genre="драма" data-duration="long">
+        <img src="https://kinopoisk-ru.clstorage.net/Sz3013n35/e894b4BoJl7-/7CdRhzNIhMEohZro8O5-NB6pgHA522aBpT4zrjzSpLkiwCkjeFL7bS26Q9wSDAL0egE1jAVbrXm9xEqBCYKa2603dHYXzdS0yQEvzYXbCoWLSbSkjV5SwHQLNkvOIaY6AFcLQIrQ-as53mc9Z7m3kH40kHg1yjkNmuIupH11f_yPV3BnVvj3sq82i9gifr4gvJjTJgkZ9VcmDOOMLeCm6GCGKZKYI8vI271ECBZJFRBsdxG6hG6IHBpwSwUNxp7_nfUC9lcZZNNOpNgLcf9NgnyZo2Tqu7eERaxgD57RN4tQ1IvSOBApWFk_hNknaTfRDJYx-cc927yYsLmHjlS8v6_lwFZX-RfCvvTLezLeb0Gu6FO2aqqWV6XeYa_Pc8UYwxWJIisAq6irjdYq54vV4g4FMfu2P1qt6gK6VF50jqwNJGI3JDjU443kq5tinA8DnwvzFEnbZYdHveMd32BGy5CGepM6cZqqqpxGWPQ7xeBfRWKIhB-abUthCdSvpy2svPfjpUdY1_J_xBgq88wNYs5o0EWq-6Sl1NwxLK0zd7jBRKozidObW1oeR0j1KYTQbbVx2BQcerzZAEgH73UM74_WIQaGmjcgDhZqS4OeTcF_OcI0uWonJNbN0hxf8VRagiQYMUgi2_s6joRqplg3UO8GQBqGPXo9yfBLJIw3bzzddBLmtTnFgP8lmalQbNyCbiszp1kb1ZX1TDBdryAEOXIkuaM6k-hrOp8EutZ6NvC9VyIbt--LTYkC2_eMRd7e3uZTBtc7JeIt9avYYt-9Unzq48frKWbV9J0zfP8ytoiCRfnTGlJryHn_Z2mWqHeC3CagqAccWu24YWjV7HYfz48Hg7eWKjTS7zcbiOHeP0P_GMME-7uHROUPsG2vAORbACfYkcrSaetI7LSIFpnEEkwWQog2HHrvSVJalQz0r1-PJ6CG9uh00l8Xq1sR7xywbllwpDlrtdRnTAHcjnEk-CLFaVD6ICl4uYwneoapFRMdVRDLlQw7rptCShTdVV1tvgUiVVdKRNLM9sn7kv1vY91a8BQpe7XU9yyyL46wBuqSFImg-pIpK_iMZ1gHOnUyvrVy-fQcCn_4Ythk_aYenJ_n0DY2uSWjPvSIiZBfjTAuaQNEeelGpae9wTw_cod4c-SbAxlQGnk4jrcKFAhXI531YMik3HqNWoD5hn5Wb96MRbCVRftV0b4UmBkRnu3xXljyVrjLhSYELsH-bNK2qXFmiIHq8jp4SHxVe7YZRkPsZlGp5yy6fVixirRdVo_MzzZSxvc4d7Cf56jq0h98gOyp4VX5C4aFhV4hnC1xVngz5Eugm0OaGIvd9GlFiIegnaVwG8TuSA-LM4h0HKRvX59EIrS3umYSjwcZq7L8XBI8aUBk2pvkpzeu0gztMwd7sFaIk5nj-dtafAd7ZJi08kxFwolmLqrfaWG6Bs53zI2tpkLWJek0ou4GOBlCLI9hniiSdgvZBwdVvoE_3pJ2yZD3--Do08mrSe02KoVbZbK9FIH7xu94Hgtg-LbMB8wcDlfilReYprNMVFjZY-2_4rxrgeY5G7bU1I7Q3g-QxgsAVqnzmHGpqQrthcgFybdTvjVwmEW9-W258loGbsQNvD_3gHeHG8ZivFSIegOfb2Gs-JGlaYukhmefMG1twQYLEmZK8_ky-8mYbiR6JRuGYg8F4Yul_Yq8C6Kr1c-HDR49F_EEN5jUwR0VSDhCH18gf1mR9On6VzX2zdMMDQNHe0EnuiIpw8mISJ-mytRohlGcFUGZtl3rvjoB-NRcZMyfnPTgVVT59NANdqgqgT59km17EXZJO5XVx-8Az72TNljAhNnhmmOIe0pd1iiHezVSfadiSlTu6F6oMZsFD3UPz4wF4MWVOneQv0RIKVP8zwLdGbJGePsEtGXO0m7sswSKkzY642li6npI7yQLFDuGMt50MgmmDppN-jOZ1i10jRy_BaLmR0q2UUzEG6tw_47SHmkzlljbRzUH_gFeXXLGmrDGqoHIM5kbKz8G6sdJZwO9xeHYJ96IfInAivX-hA2svMdQJPSpVLNsJsnpAO08of6q4CWaibb3JK-QPJ_C5VtDZ8iROHAIeeufZltX2DcwHlUQiZR-at6JU4k2zCTM_rzlY7YnGrajfCZZWzLPHRJ_WeNGKzhndeQMQ-7tUvZZU2bbAxoQaFk57-Upp4tE4Y5EInhmLhrOadG6RGyGroycVTGkppr1oM4mKYuz7F1jrohB5EkLprUW3FFdbeDGyzKXqvHo0cnrGb9kO8UZ5kOelvPJp4x4PHogmFS8V818zvbSRHVohbJNF0gocG9Ng385oDdryHckRZywz18QxEuyN6oheGB6CQu8dhvFy2YDvZSwS5VMGA-ZUngkPCdtvG91YFYXmDawriaZuYG-vCB-CoMGO5kHd4U_omxOwxVocxXKkznh-UmKH_Vp12mGM713Uiu37BqOGJOq9c-2vTztpyC2lxjW4w93OWlynPyhreqR9ko51aY1XFJdj0FlSIPUyIGIIKo5KC8myVcrBlCeNXNIB_6pfEmimmbuxO9vvwdiRQdYd6EdRUnbAD6dcq5qcFVrKmV0N14jXo5wdXiTF6siyIA6epifxIgVuYfz_pfi-7Ru-Axak2gX3rQvbbxWYaVlCdcQn2dICMDejyGei5O1metml4adIHy84LTa8OZ7YNvAOxk7v_Vr1TpHwSxnYhlUbDuuKFNJlBxUD1zt9GMk9ftlIp5GalgjLr8Svetzpmqr19WmHMHtT7A0iNNXatL7cyhJOe2GyrXIhCGeV3D6Fcz5DbtS-zQOBr8NfTUj1wYq9OBs9ZhY0L-uEL16cVfpO5RnhcxwzqyBVFmSFpqjKHCYCnpf1qrFGrQRv_Sguzbe6v35kypGL7aMn252AfQ12dUCnQZ7yGO_fOAsOPCkStt316UdMiwccscqkEfbQxsDmBlYfpdq9kpXM-xlMDokHLuug" alt="Форрест Гамп">
+        <h3>Форрест Гамп</h3>
+        <p>Жизнь простого человека, повлиявшего на историю. Классика с Томом Хэнксом.</p>
       </div>
-      <div class="tinder--card">
-        <img src="https://loremflickr.com/600/300/desert">
-        <h3>Scenic View 5</h3>
-        <p>Stunning desert dunes at sunset.</p>
+      <div class="tinder--card" data-mood="фэнтези" data-genre="фэнтези" data-duration="long">
+        <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/a2d5bcae-a1a9-442f-8195-f5373a5ba77f/600x900" alt="Властелин колец: Братство кольца">
+        <h3>Властелин колец: Братство кольца</h3>
+        <p>Эпическое фэнтези о путешествии хоббитов. Режиссёр: Питер Джексон.</p>
       </div>
     </div>
 

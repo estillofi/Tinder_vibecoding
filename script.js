@@ -5,6 +5,45 @@ var allCards = document.querySelectorAll('.tinder--card');
 var nope = document.getElementById('nope');
 var love = document.getElementById('love');
 
+var moodSelect = document.getElementById('mood');
+var genreSelect = document.getElementById('genre');
+var durationSelect = document.getElementById('duration');
+
+function filterCards() {
+  var mood = moodSelect.value;
+  var genre = genreSelect.value;
+  var duration = durationSelect.value;
+
+  allCards.forEach(function(card) {
+    var cardMood = card.getAttribute('data-mood');
+    var cardGenre = card.getAttribute('data-genre');
+    var cardDuration = card.getAttribute('data-duration');
+
+    var showCard = true;
+
+    if (mood && cardMood !== mood) showCard = false;
+    if (genre && cardGenre !== genre) showCard = false;
+    if (duration && cardDuration !== duration) showCard = false;
+
+    card.style.display = showCard ? 'block' : 'none';
+  });
+
+  initCards();
+}
+
+moodSelect.addEventListener('change', filterCards);
+genreSelect.addEventListener('change', filterCards);
+durationSelect.addEventListener('change', filterCards);
+
+// Keyboard controls
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'ArrowLeft') {
+    nope.click();
+  } else if (event.key === 'ArrowRight') {
+    love.click();
+  }
+});
+
 function initCards(card, index) {
   var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
 
